@@ -143,7 +143,7 @@ public class Playlist extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         tblPlaylist = new javax.swing.JTable();
 
-        addFiles.setText("jMenuItem1");
+        addFiles.setText("Add File(s)");
         addFiles.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 addFilesStateChanged(evt);
@@ -156,7 +156,7 @@ public class Playlist extends javax.swing.JFrame {
         });
         popupTombol.add(addFiles);
 
-        addFolder.setText("jMenuItem2");
+        addFolder.setText("Add Folder");
         addFolder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addFolderActionPerformed(evt);
@@ -164,7 +164,7 @@ public class Playlist extends javax.swing.JFrame {
         });
         popupTombol.add(addFolder);
 
-        clearPlaylist.setText("jMenuItem3");
+        clearPlaylist.setText("Clear Playlist");
         clearPlaylist.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clearPlaylistActionPerformed(evt);
@@ -232,7 +232,7 @@ public class Playlist extends javax.swing.JFrame {
         fc.setMultiSelectionEnabled(true);
         fc.setDialogTitle("Add Files");
         fc.setAcceptAllFileFilterUsed(false);
-        fc.setFileFilter(new FileNameExtensionFilter("MP3 File (*.mp3)"));
+        fc.setFileFilter(new FileNameExtensionFilter("MP3 File (*.mp3", "mp3"));
         fc.setApproveButtonText("Add Files");
         int show = fc.showOpenDialog(this);
         if (show == JFileChooser.APPROVE_OPTION) {
